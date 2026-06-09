@@ -1,0 +1,26 @@
+body {
+    padding-top: 60px;
+}
+.container-fluid{
+        background-color: #fff;
+}
+.navbar{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 9999999;
+    height: 60px;
+}
+.navbar-brand img{
+    width: 60px;
+    height: 60px;
+}
+.nav-link:hover {
+    color: red !important;
+}
+.icon-cart{
+    font-size: 40px;
+    margin-bottom: 10px;
+}

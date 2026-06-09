@@ -1,0 +1,117 @@
+
+.overview {
+    margin-left: 400px;
+    background-color: rgb(49, 47, 47);
+    color: white;
+    padding: 20px;
+}
+.overview-heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+.overview-heading-btn button {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 9px;
+    font-size: 15px;
+}
+.orders-box{
+    /* border: 2px solid black;
+    border-radius: 9px; */
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.orders-box-1 {
+    background-color: rgb(33, 32, 32);
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 10px;
+    width: 250px;
+    
+}
+.orders-box-1 p {
+    margin: 0px;
+    padding: 0px;
+}
+.live-updates {
+    font-size: 30px;
+}
+.color-update{
+    color: green;
+}
+.tracking-payment-box{
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+    margin: 10px;
+}
+.tracking-box{
+    border: 2px solid white;
+    border-radius: 9px;
+    margin-right: 10px;
+    padding: 20px;
+    width: 400px;
+}
+.tracking-box-1 th {
+    border-collapse: collapse;
+    border-bottom: 2px solid white;
+}
+.tracking-box-1 td {
+    text-align: center;
+    border-collapse: collapse;
+    border-bottom: 2px solid white;
+}
+.tracking-box-1 button{
+    border-radius: 9px;
+}
+.tracking-box-2 {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid white;
+    border-radius: 9px;
+    background-color: rgb(49, 47, 47);
+    color: white;
+    margin-top: 10px;
+}
+.payment-box{
+    border: 2px solid white;
+    border-radius: 9px;
+    padding: 20px;
+    height: 400px;
+    width: 300px;
+}
+.payment-box-1{
+    display: flex;
+    justify-content: space-between;
+}
+.payment-box hr{
+    margin: 0px;
+    padding: 0px;
+}
+.payment-box-1 button{
+    margin-top: 10px;
+    border-radius: 9px;
+    padding: 10px;
+}
+.active-offer-box {
+    border: 2px solid #fff;
+    border-radius: 9px;
+    padding: 10px;
+    margin: 10px;
+}
+.offers-box {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #fff;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    align-items: center;
+    /* text-align: center; */
+}
+.offers-box button{
+    border-radius: 9px;
+}

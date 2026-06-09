@@ -1,0 +1,28 @@
+.contact-us {
+    background-color: #16663B;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+.contact-us-btn1{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 9px;
+    margin-left: 20px;
+}
+.contact-us-btn1:hover {
+    background-color: white;
+    color: black;
+}
+.contact-us-btn2{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 9px;
+    margin-left: 20px;
+}
+.contact-us-btn2:hover {
+    background-color: black;
+    color: white;
+}

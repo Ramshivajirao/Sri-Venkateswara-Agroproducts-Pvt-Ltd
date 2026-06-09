@@ -1,0 +1,71 @@
+.research{
+    background-color: #16663B;
+    color: white;
+    padding: 30px;
+}
+.research-block{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.research-title{
+    margin-bottom: 20px;
+    background-color: rgb(61, 65, 56);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+.research-boxes{
+    background-color: #e6dfcd;
+    color: black;
+    border-radius: 9px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 15px;
+    
+}
+.research-boxes-1{
+    font-size: 50px;
+    border-radius: 9px;
+    height: 100px;
+}
+.research-boxes-2 p{
+    margin: 0px;
+    padding: 0px;
+}
+.research-boxes-box{
+    border-radius: 30px;
+    width: 150px;
+    /* padding-left: 10px !important; */
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+p{
+    font-size: 15px;
+}
+.research-verty{
+    background-color: #365A4A;
+    /* border: 2px solid white; */
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+.research-verty-1{
+    text-align: center;
+    background-color: #365A4A;
+    /* border: 2px solid white; */
+    border-radius: 30px;
+    padding: 10px;
+    
+}
+.research-verty-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.research-verty-main{
+    margin-top: 100px;
+}

@@ -1,0 +1,68 @@
+
+.Quality-body{
+    background-Color: rgb(27, 67, 50);
+    padding: 40px;
+    color: white;
+}
+.Quality-title{
+    margin-bottom: 20px;
+    background-color: rgb(61, 65, 56);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 240px;
+}
+
+.Quality-heading h3{
+    font-size: 46px;
+}
+.Quality-heading p{
+    font-size: 21px;
+}
+.Quality-flex-1 {
+    display: flex;
+}
+.Quality-flex-1 h3{
+    font-size: 25px;
+}
+
+.Quality-flex-para{
+    padding: 6px;
+}
+.Quality-flex-para h4{
+    font-size: 16px;
+}
+.Quality-flex-para p{
+    font-size: 15px;
+}
+.Quality-flex-main-component{
+    display: flex;
+}
+.Quality-big {
+    background-color: rgba(255, 255, 255, .05);
+    padding: 10px;
+    border-radius: 20px;
+}
+.Quality-small-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.Quality-mini-box,
+.Quality-small-box-2-1{
+    background: rgba(255, 255, 255, .07);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 5px;
+    text-align: center;
+}
+.Quality-mini-box h5{
+    font-size: 15px;
+}
+.Quality-small-box-2-1 h5{
+    font-size: 15px;
+}
+.Quality-mini-box,
+.Quality-small-box-2-1 p{
+    font-size: 15px;
+}

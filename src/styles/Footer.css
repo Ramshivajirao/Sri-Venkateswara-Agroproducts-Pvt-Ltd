@@ -1,0 +1,20 @@
+.footer{
+    background-color: rgb(27, 67, 50);
+    color: white;
+    padding: 20px;
+}
+.footer-body {
+    display: flex; 
+    justify-Content: space-between;
+    width: 100%;
+    padding: 30px;
+}
+.footer-credits{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-credits-1{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
