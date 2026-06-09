@@ -55,6 +55,9 @@
     padding: 20px;
     width: 400px;
 }
+.tracking-box-1 td{
+    padding: 10px;
+}
 .tracking-box-1 th {
     border-collapse: collapse;
     border-bottom: 2px solid white;

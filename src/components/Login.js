@@ -31,7 +31,7 @@ const Login = () => {
       formData.password === parsedUserData.password
     ) {
       alert("Login Successful!");
-      navigate("/");
+      navigate("/dashboard");
     } else {
       alert("Invalid email or password. Please try again.");
     }
