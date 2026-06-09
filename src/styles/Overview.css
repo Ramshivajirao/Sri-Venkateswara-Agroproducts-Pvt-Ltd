@@ -1,6 +1,6 @@
 
 .overview {
-    margin-top: -700px;
+    margin-top: -550px;
     margin-left: 300px;
     background-color: rgb(49, 47, 47);
     color: white;
@@ -19,8 +19,6 @@
     font-size: 15px;
 }
 .orders-box{
-    /* border: 2px solid black;
-    border-radius: 9px; */
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
@@ -118,4 +116,57 @@
 }
 .offers-box button{
     border-radius: 9px;
+}
+
+@media (max-width: 740px){
+    .overview {
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    background-color: rgb(49, 47, 47);
+    color: white;
+    padding: 20px;
+    }
+    .tracking-payment-box{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0px;
+    margin: 0px;
+    }
+    .tracking-box{
+    border: 2px solid white;
+    border-radius: 9px;
+    margin-right: 0px;
+    padding: 0px;
+    width: 300px;
+    }
+    .tracking-box-1 td{
+    padding: 0px;
+}
+    .overview-heading-btn button {
+        display: flex;
+        justify-content: flex-start;
+    margin-left: 0px;
+    padding: 10px;
+    border-radius: 9px;
+    font-size: 15px;
+    }
+    .overview-heading{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    text-align: center;
+}
+.orders-box{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.active-offer-box {
+    border: 2px solid #fff;
+    border-radius: 9px;
+    padding: 5px;
+    margin: 0px;
+}
 }

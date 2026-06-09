@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdPayments, MdLocalOffer } from "react-icons/md";
 import { GrCompliance, GrOverview } from "react-icons/gr";
@@ -8,19 +8,30 @@ import { FaBoxOpen } from "react-icons/fa";
 import "../styles/Sidebar.css";
 import logo_of_svpt_001 from "../assests/logo_of_svpt_001.png";
 import { useNavigate } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <div>
-      <div className="sidebar-container">
-        <div className="brand-header">
-          <img
-            src={logo_of_svpt_001}
-            alt="Logo"
-            width="190"
-            style={{ padding: "0px", margin: "0px" }}
-          />
+    <div className="">
+      <button className="mobile-menu-btn" onClick={toggleMenu}>
+        {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+      </button>
+      <div className={`sidebar-container ${isOpen ? "active" : ""}`}>
+        <div className="sidebar-container">
+          <div className="brand-header">
+            <img
+              src={logo_of_svpt_001}
+              alt="Logo"
+              width="190"
+              style={{ padding: "0px", margin: "0px" }}
+            />
+          </div>
         </div>
         <div className="">
           <ul className="side-items">
