@@ -18,3 +18,7 @@
     justify-content: space-between;
     gap: 15px;
 }
+.footer-body a {
+    text-decoration: none;
+    margin-top: 20px;
+}

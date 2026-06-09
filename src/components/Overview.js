@@ -9,7 +9,7 @@ import { FaRupeeSign } from "react-icons/fa";
 const Overview = () => {
     
   return (
-    <div className="container">
+    <div className="">
       <div className="overview">
         <div className="overview-heading">
           <div className="">

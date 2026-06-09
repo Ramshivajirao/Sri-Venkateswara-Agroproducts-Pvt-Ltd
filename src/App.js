@@ -14,7 +14,7 @@ import Login from "./components/Login";
 import Resources from "./components/Resources";
 import Registration from "./components/Registration";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Dashboard from './components/Dashboard';
+import DashboardLayout from "./components/Dashboards/DashboardLayout";
 
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/"element={<Quality />}/>
         <Route path="/registration" element={<Registration/>}/>
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/DashboardLayout/*" element={<DashboardLayout/>} />
       </Routes> 
     </div>
   );

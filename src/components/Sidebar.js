@@ -1,81 +1,102 @@
-import React, { useState } from 'react';
-import '../styles/Sidebar.css';
-import { MdPayments,MdLocalOffer } from "react-icons/md";
-import { GrCompliance } from "react-icons/gr";
-import logo_of_svpt_001 from '../assests/logo_of_svpt_001.png'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { MdPayments, MdLocalOffer } from "react-icons/md";
+import { GrCompliance, GrOverview } from "react-icons/gr";
+import { RxDashboard } from "react-icons/rx";
+import { ImList2 } from "react-icons/im";
+import { FaBoxOpen } from "react-icons/fa";
+import "../styles/Sidebar.css";
+import logo_of_svpt_001 from "../assests/logo_of_svpt_001.png";
+import { useNavigate } from "react-router-dom";
 
-
-// Centralized navigation data
-const navigationData = [
-  { id: 'dashboard', label: 'Dashboard', icon: '📊', path: '/dashboard' },
-  { id: 'overview', label: 'Overview',icon: '❤️',path:'/overview'},
-  { id: 'myorders', label: 'My Orders', icon: '🌱', path: '/myorders' },
-  { id: 'bulkorders', label: 'Place Bulk Orders', icon: '📦', path: '/bulkorders' },
-  { id: 'payments', label: 'Payments', icon: <MdPayments /> , path: '/payments' },
-  { id: 'offer', label: 'Offers & Schemes', icon: <MdLocalOffer />, path: '/offers' },
-  { id: 'complaint', label: 'Raise Complaints', icon: <GrCompliance />
-, path: '/complaint' },
-];
-
-// Component: The Identity
-const BrandHeader = () => (
-  <div className="brand-header">
-    <img src={logo_of_svpt_001} alt='....' width="190px" padding="0px" margin="0px"/>
-  </div>
-);
-
-// Component: Individual Links
-const NavItem = ({ label, icon, isActive, onClick }) => (
-  <button 
-    className={`nav-item ${isActive ? 'active' : ''}`} 
-    onClick={onClick}
-  >
-    <span className="nav-icon">{icon}</span>
-    <span className="nav-label">{label}</span>
-  </button>
-);
-
-// Component: The Logic Hub
-const NavMenu = ({ links, activeId, setActiveId }) => (
-  <nav className="nav-menu">
-    {links.map((link) => (
-      <NavItem 
-        key={link.id} // Using unique IDs prevents rendering bugs
-        label={link.label}
-        icon={link.icon}
-        isActive={activeId === link.id}
-        onClick={() => setActiveId(link.id)}
-      />
-    ))}
-  </nav>
-);
-
-// Component: The User Hub
-const SidebarFooter = () => (
-  <div className="sidebar-footer">
-    <div className="user-profile">
-      <span className="user-avatar">👤</span>
-      <span className="user-name">DEALER</span>
-    </div>
-    <button className="logout-btn">Log Out</button>
-  </div>
-);
-
-// Component: The Wrapper (Main Export)
 const Sidebar = () => {
-  // Managing active state here keeps the child components "dumb" and focused on UI
-  const [activeTab, setActiveTab] = useState('dashboard');
-
+  const navigate = useNavigate();
   return (
-    <aside className="sidebar-container">
-      <BrandHeader />
-      <NavMenu 
-        links={navigationData} 
-        activeId={activeTab} 
-        setActiveId={setActiveTab} 
-      />
-      <SidebarFooter />
-    </aside>
+    <div>
+      <div className="sidebar-container">
+        <div className="brand-header">
+          <img
+            src={logo_of_svpt_001}
+            alt="Logo"
+            width="190"
+            style={{ padding: "0px", margin: "0px" }}
+          />
+        </div>
+        <div className="">
+          <ul className="side-items">
+            <li>
+              <NavLink
+                to="/DashboardLayout/dashboard"
+                end
+                className="side-items-1"
+              >
+                <span>
+                  <RxDashboard />
+                </span>
+                <label>Dashboard</label>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashboardLayout/overview" end className="">
+                <span>
+                  <GrOverview />
+                </span>
+                <label>Overview</label>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashboardLayout/myorders" end className="">
+                <span>
+                  <ImList2 />
+                </span>
+                <label>My Orders</label>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashboardLayout/plackebulkorders" end className="">
+                <span>
+                  <FaBoxOpen />
+                </span>
+                <label>Place Bulk Orders</label>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashboardLayout/payments" end className="">
+                <span>
+                  <MdPayments />
+                </span>
+                <label> Payments</label>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashboardLayout/offers&schemes" end className="">
+                <span>
+                  <MdLocalOffer />
+                </span>
+                <label> Offers & Schemes</label>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/DashboardLayout/raisecomplains" end className="">
+                <span>
+                  <GrCompliance />
+                </span>
+                <label> Raise Complaints</label>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="sidebar-footer">
+          <div className="user-profile">
+            <span className="user-avatar">👤</span>
+            <span className="user-name">DEALER</span>
+          </div>
+          <button className="logout-btn" onClick={() => navigate("/")}>
+            Log Out
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
