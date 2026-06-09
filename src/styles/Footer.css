@@ -22,3 +22,29 @@
     text-decoration: none;
     margin-top: 20px;
 }
+
+@media (max-width: 900px) {
+  .footer-body {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .footer-body {
+    grid-template-columns: 1fr; 
+    text-align: center; 
+  }
+
+  .footer-credits {
+    flex-direction: column; 
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-credits-1 {
+    justify-content: center; 
+    flex-wrap: wrap; 
+  }
+}
