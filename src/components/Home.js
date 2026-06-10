@@ -1,5 +1,4 @@
 import React from "react";
-import '../styles/Home.css';
 import kharif from '../assests/kharif.png';
 import rabi from '../assests/rabi.png';
 import chilli from '../assests/chilli.png'

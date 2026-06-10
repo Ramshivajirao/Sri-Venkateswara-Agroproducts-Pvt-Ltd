@@ -1,8 +1,7 @@
 import React from "react";
 import "../styles/Overview.css";
-import { CiBellOn } from "react-icons/ci";
+import { CiBellOn,CiMemoPad } from "react-icons/ci";
 import { MdOutlineLocalOffer } from "react-icons/md";
-import { CiMemoPad } from "react-icons/ci";
 import { SiContactlesspayment } from "react-icons/si";
 import { FaRupeeSign } from "react-icons/fa";
 
@@ -47,7 +46,6 @@ const Overview = () => {
         <div className="tracking-payment-box">
           <div className="tracking-box">
             <h4>
-              {" "}
               <CiMemoPad /> Order Tracking
             </h4>
             <div className="tracking-box-1">
@@ -101,7 +99,6 @@ const Overview = () => {
           <div>
             <div className="payment-box">
               <h4>
-                {" "}
                 <SiContactlesspayment /> Payments
               </h4>
               <div className="payment-box-1">

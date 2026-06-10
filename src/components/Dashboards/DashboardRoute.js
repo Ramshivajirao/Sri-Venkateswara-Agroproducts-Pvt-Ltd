@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Overview from '../Overview';
-// import Landingpage from '../Landingpage';
+import Myorders from '../Myorders';
 
 
 const DashboardRoute = () => {
   return (
     <Routes>
         <Route path='/overview' element={<Overview/>}/>
-        {/* <Route path="/" element={<Landingpage/>} /> */}
+        <Route path='/myorders' element={<Myorders/>}/>
     </Routes>
   )
 }
