@@ -93,3 +93,64 @@ hr{
 .order-journey-1{
     margin: 30px 60px;
 }
+
+
+
+
+
+@media (max-width: 740px){
+    .myorders-1 {
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    background-color: rgb(49, 47, 47);
+    color: white;
+    padding: 20px;
+    }
+    .myorders-myjourney{
+    display: flex;
+    flex-direction: column;
+    }
+    .delivery-info{
+        width: 310px;
+    }
+    .delivery-info-1{
+        width: 280px;
+    }
+    .order-journey{
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 310px;
+    height: 650px;
+    margin: 10px 0px;
+    }
+    .order-journey-1{
+    margin: 10px 30px;
+    }
+    .myorders-box{
+    border: 2px solid white;
+    border-radius: 9px;
+    width: 310px;
+    padding: 0px;
+    margin: 0px;
+    }
+    .myorders-box-1 td{
+        padding: 0px;
+    }
+    .myorders-box-1 th {
+        border-collapse: collapse;
+        border-bottom: 2px solid white;
+    }
+    .myorders-box-1 td {
+        /* text-align: center; */
+        border-collapse: collapse;
+        border-bottom: 2px solid white;
+    }
+    .myorder-orderitem-box{
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 280px;
+        margin: 10px;
+    }
+}

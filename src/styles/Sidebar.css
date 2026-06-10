@@ -93,7 +93,7 @@
   .mobile-menu-btn {
     display: block; 
     position: fixed; 
-    top: 15px;         
+    top: 100px;         
     right: 15px;       
     left: auto;
     z-index: 10000;    
