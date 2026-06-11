@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Overview from './Overview';
 import Myorders from './Myorders';
 import PlaceBulkOrder from './PlaceBulkOrder';
+import Offers from './Offers';
 
 
 const DashboardRoute = () => {
@@ -11,6 +12,7 @@ const DashboardRoute = () => {
         <Route path='/overview' element={<Overview/>}/>
         <Route path='/myorders' element={<Myorders/>}/>
         <Route path='/plackebulkorders' element={<PlaceBulkOrder/>}/>
+        <Route path='/offers&schemes' element={<Offers/>}/>
     </Routes>
   )
 }
