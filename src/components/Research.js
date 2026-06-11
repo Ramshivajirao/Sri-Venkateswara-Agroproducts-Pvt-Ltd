@@ -6,7 +6,7 @@ import { LuTriangleRight } from "react-icons/lu";
 
 const Research = () => {
   return (
-    <div className="research">
+    <div className="research" id="ourresearch">
       <div className="container">
         <div className="row">
           <div className="research col-md-6 col-sm-12 p-2">

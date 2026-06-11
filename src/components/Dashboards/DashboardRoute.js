@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Overview from '../Overview';
-import Myorders from '../Myorders';
+import Overview from './Overview';
+import Myorders from './Myorders';
+import PlaceBulkOrder from './PlaceBulkOrder';
 
 
 const DashboardRoute = () => {
@@ -9,6 +10,7 @@ const DashboardRoute = () => {
     <Routes>
         <Route path='/overview' element={<Overview/>}/>
         <Route path='/myorders' element={<Myorders/>}/>
+        <Route path='/plackebulkorders' element={<PlaceBulkOrder/>}/>
     </Routes>
   )
 }

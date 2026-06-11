@@ -1,0 +1,236 @@
+.placebulkorders{
+    margin-top: -15px;
+    margin-left: 280px;
+    background-color: rgb(49, 47, 47);
+    color: white;
+    padding: 20px;
+}
+.placebulk-heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* text-align: center; */
+}
+.placebulk-heading-btn button {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 9px;
+    font-size: 15px;
+}
+.placebulk-order{
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 30px;
+}
+.placebulk-order td{
+    padding: 4px 15px;
+}
+.placebulk-order th {
+    border-collapse: collapse;
+    border-bottom: 2px solid rgb(161, 161, 161);
+    padding: 4px 15px;
+    text-align: center;
+}
+.placebulk-order td {
+    text-align: center;
+    border-collapse: collapse;
+    border-bottom: 2px solid rgb(133, 131, 131);
+}
+.placebulk-sel-opt {
+    background-color: rgb(49, 47, 47);
+    color: white;
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+}
+.placebulk-sel-btn {
+    background-color: rgb(49, 47, 47);
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+.placebulk-del-sum{
+    display: flex;
+    justify-content: center;
+}
+.placebulk-delivery{
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(23, 22, 22);
+}
+.placebulk-summary{
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(23, 22, 22);
+}
+.placebulk-summary-pp{
+    display: flex;
+    justify-content: space-between;
+}
+.placebulk-summary-pp-gg{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(3, 246, 3);
+}
+.placebulk-btns {
+    background-color: rgb(49, 47, 47);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+.placebulk-input {
+    background-color: rgb(49, 47, 47);
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+}
+.placebulk-input-01 {
+    background-color: rgb(49, 47, 47);
+    color: white;
+    border-radius: 5px;
+    height: 80px;
+    width: 300px;
+}
+
+
+/* --- Mobile Devices --- */
+@media (max-width: 767px) {
+    .placebulkorders {
+        margin: 0 5px; /* Overrides large margins so it fits on small screens */
+        background-color: rgb(49, 47, 47);
+        color: white;
+        padding: 15px;
+    }
+
+    .placebulk-heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 3px;
+    }
+
+    .placebulk-del-sum {
+        display: flex;
+        flex-direction: column; /* Stacks delivery and summary vertically */
+        gap: 15px; /* Adds space between stacked items */
+    }
+
+    .placebulk-order {
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 3px;
+        margin-top: 20px;
+        overflow-x: auto; /* Prevents tables from breaking mobile widths */
+    }
+
+    .placebulk-order th {
+        border-collapse: collapse;
+        border-bottom: 2px solid rgb(161, 161, 161);
+        padding: 5px;
+    }
+
+    .placebulk-order td {
+        text-align: center;
+        border-collapse: collapse;
+        border-bottom: 2px solid rgb(133, 131, 131);
+        padding: 5px;
+    }
+
+    .placebulk-sel-opt {
+        background-color: rgb(49, 47, 47);
+        color: white;
+        border-radius: 5px;
+        width: 100%; /* Wider dropdowns for easier tapping */
+        padding: 5px;
+    }
+
+    .placebulk-delivery,
+    .placebulk-summary {
+        width: 100%;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0px;
+        background-color: rgb(23, 22, 22);
+    }
+
+    .placebulk-input-01 {
+        background-color: rgb(49, 47, 47);
+        color: white;
+        border-radius: 5px;
+        height: 60px;
+        width: 100%; /* Full width inputs on mobile */
+        padding: 5px;
+    }
+}
+/* --- Tablet Devices --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .placebulkorders {
+        margin-top: -15px;
+        margin-left: 50px; /* Reduced from 280px to prevent pushing off-screen */
+        margin-right: 50px;
+        background-color: rgb(49, 47, 47);
+        color: white;
+        padding: 20px;
+    }
+
+    .placebulk-heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .placebulk-del-sum {
+        display: flex;
+        flex-direction: row; /* Places delivery and summary side-by-side */
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .placebulk-order {
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+
+    .placebulk-order th,
+    .placebulk-order td {
+        padding: 10px; /* More breathing room on tablets */
+        border-bottom: 2px solid rgb(161, 161, 161);
+        text-align: center;
+    }
+
+    .placebulk-sel-opt {
+        background-color: rgb(49, 47, 47);
+        color: white;
+        border-radius: 5px;
+        width: 80px; 
+    }
+
+    /* Shared styles for Delivery and Summary boxes */
+    .placebulk-delivery,
+    .placebulk-summary {
+        width: 48%; /* Takes up roughly half the screen each */
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+        background-color: rgb(23, 22, 22);
+    }
+
+    .placebulk-input-01 {
+        background-color: rgb(49, 47, 47);
+        color: white;
+        border-radius: 5px;
+        height: 80px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

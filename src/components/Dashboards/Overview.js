@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Overview.css";
+import "../../styles/Overview.css";
 import { CiBellOn,CiMemoPad } from "react-icons/ci";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { SiContactlesspayment } from "react-icons/si";

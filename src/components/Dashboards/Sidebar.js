@@ -5,8 +5,8 @@ import { GrCompliance, GrOverview } from "react-icons/gr";
 import { RxDashboard } from "react-icons/rx";
 import { ImList2 } from "react-icons/im";
 import { FaBoxOpen, FaBars, FaTimes } from "react-icons/fa";
-import "../styles/Sidebar.css";
-import logo_of_svpt_001 from "../assests/logo_of_svpt_001.png";
+import '../../styles/Sidebar.css';
+import logo_of_svpt_001 from "../../assests/logo_of_svpt_001.png";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -33,9 +33,9 @@ const Sidebar = () => {
 
         <ul className="side-items">
           <li>
-            <NavLink to="/DashboardLayout/dashboard" end>
+            <NavLink to="/DashboardLayout/products" end>
               <span><RxDashboard /></span>
-              <label>Dashboard</label>
+              <label>Products</label>
             </NavLink>
           </li>
           <li>

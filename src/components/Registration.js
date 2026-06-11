@@ -25,7 +25,7 @@ const Registration = () => {
     e.preventDefault();
     localStorage.setItem("userData", JSON.stringify(formData));
     alert(
-      "Form Submitted Sucessfully& You will get your credentials Through Email & Thanks You for register ",
+      "Form Submitted Sucessfully",
     );
     setFormData({
       name: "",

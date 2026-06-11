@@ -1,7 +1,7 @@
 import React from 'react'
 
 import DashboardRoute from './DashboardRoute';
-import Sidebar from '../Sidebar';
+import Sidebar from './Sidebar';
 
 
 const DashboardLayout = () => {

@@ -50,34 +50,13 @@ function Navbar() {
                   About
                 </Nav.Link> 
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
                 <Nav.Link
-                  className="nav-link dropdown-toggle"
-                  href="#ourproducts"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  className="nav-link"
+                  href="#ourresearch"
                 >
-                  Our Products
+                  Our Research
                 </Nav.Link>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <NavLink className="dropdown-item" to="/fieldcrops">
-                      Field Crops
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="dropdown-item" to="/vegetablesseeds">
-                      Vegetable Seeds
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="dropdown-item" to="/foragecrops">
-                      Forage Crops
-                    </NavLink>
-                  </li>
-                </ul>
               </li>
               <li className="nav-item">
                 <Nav.Link
@@ -104,20 +83,9 @@ function Navbar() {
                 </Nav.Link>
               </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success m-2" type="submit">
-                Search
-              </button>
               <button className="btn btn-outline-success m-2" type="login" onClick={()=> navigate("/login")} >
                 Login
               </button>
-            </form>
             <span className="icon-cart"><IoIosCart /></span>
           </div>
         </div>

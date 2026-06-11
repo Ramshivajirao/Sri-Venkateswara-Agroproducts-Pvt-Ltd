@@ -89,7 +89,7 @@
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
   .mobile-menu-btn {
     display: block; 
     position: fixed; 

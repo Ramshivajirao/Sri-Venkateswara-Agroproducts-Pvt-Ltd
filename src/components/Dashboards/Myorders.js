@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/Myorders.css';
+import '../../styles/Myorders.css';
 import { GrCompliance } from "react-icons/gr";
 import { MdOutlineFileDownload } from "react-icons/md";
 
@@ -8,12 +8,12 @@ const Myorders = () => {
     <div className="myorders">
       <div className="myorders-1">
         <div>
-          <h3>My Orders/Order #BLK-0089</h3>
+          <h4>My Orders/Order #BLK-0089</h4>
         </div>
         <div className="myorders-heading">
           <div>
             <div className="myorders-heading-1">
-              <h2>ORDER #BLK-0089</h2>
+              <h3>ORDER #BLK-0089</h3>
               <button>In Transport</button>
             </div>
             <div className="">

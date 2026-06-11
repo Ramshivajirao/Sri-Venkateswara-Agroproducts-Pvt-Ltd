@@ -1,5 +1,6 @@
 .myorders-1{
-    margin-left: 300px;
+    margin-top: -15px;
+    margin-left: 280px;
     background-color: rgb(49, 47, 47);
     color: white;
     padding: 20px;
@@ -7,7 +8,8 @@
 .myorders-heading{
     display: flex;
     justify-content: space-between;
-    margin: 30px 0px;
+    padding: 20px;
+    /* margin: 30px 0px; */
 }
 .myorders-heading-1{
     display: flex;

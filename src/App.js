@@ -6,15 +6,13 @@ import Landingpage from "./components/Landingpage";
 import About from "./components/About";
 import Quality from "./components/Quality";
 import ContactUs from "./components/ContactUs";
-import FieldCrops from "./components/FieldCrops";
-import VegetableSeeds from "./components/VegetableSeeds";
-import ForageCrops from "./components/ForageCrops";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Resources from "./components/Resources";
 import Registration from "./components/Registration";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DashboardLayout from "./components/Dashboards/DashboardLayout";
+import Research from "./components/Research";
 
 
 const App = () => {
@@ -26,9 +24,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/aboutus" element={<About />} />
         <Route path="/qualityr&d" element={<Quality />} />
-        <Route path="/fieldcrops" element={<FieldCrops />} />
-        <Route path="/vegetablesseeds" element={<VegetableSeeds />} />
-        <Route path="/foragecrops" element={<ForageCrops />} />
+        <Route path="/ourresearch" element={<Research/>} />
         <Route path="/resources" element={<Resources/>}/>
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/login" element={<Login/>}/>

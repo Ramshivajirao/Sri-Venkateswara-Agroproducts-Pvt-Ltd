@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     const storedUserData = localStorage.getItem("userData");
     if (!storedUserData) {
-      alert("No Account found. Please register first.");
+      alert("No Account found. Please register first down below.");
       return;
     }
     const parsedUserData = JSON.parse(storedUserData);
