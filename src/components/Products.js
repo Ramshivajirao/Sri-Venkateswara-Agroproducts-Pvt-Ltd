@@ -27,7 +27,7 @@ const Products = () => {
                 <p>Kharif</p>
               </div>
               <div className="products-cards-1">
-                <p>🌾</p>
+                <span>🌾</span>
               </div>
               <div className="products-cards-2">
                 <h4>Paddy / Rice</h4>
@@ -51,7 +51,7 @@ const Products = () => {
                 <p>Kharif</p>
               </div>
               <div className="products-cards-1">
-                <p>🌽</p>
+                <span>🌽</span>
               </div>
               <div className="products-cards-2">
                 <h4>Maize / Corn</h4>
@@ -75,7 +75,7 @@ const Products = () => {
                 <p>Rabi</p>
               </div>
               <div className="products-cards-1">
-                <p>🌿</p>
+                <span>🌿</span>
               </div>
               <div className="products-cards-2">
                 <h4>Wheat</h4>
@@ -99,7 +99,7 @@ const Products = () => {
                 <p>Rabi</p>
               </div>
               <div className="products-cards-1">
-                <p>🟡</p>
+                <span>🟡</span>
               </div>
               <div className="products-cards-2">
                 <h4>Sunflower</h4>
@@ -123,7 +123,7 @@ const Products = () => {
                 <p>Vegetables</p>
               </div>
               <div className="products-cards-1">
-                <p>🍅</p>
+                <span>🍅</span>
               </div>
               <div className="products-cards-2">
                 <h4>Tomato</h4>
@@ -147,7 +147,7 @@ const Products = () => {
                 <p>Vegetables</p>
               </div>
               <div className="products-cards-1">
-                <p>🫑</p>
+                <span>🫑</span>
               </div>
               <div className="products-cards-2">
                 <h4>Chilli & Capsicum</h4>

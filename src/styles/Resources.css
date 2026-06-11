@@ -2,7 +2,43 @@
     background-color: rgb(27, 67, 50);
     color: white;
 }
+.resources-body{
+    text-align: center;
+}
 .resources-body p{
     margin: 0px;
     padding: 0px;
+}
+.resources-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.resources-boxes{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+}
+.resources-boxes span{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.resources-boxes p{
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+@media (max-width: 770px){
+    .resources-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+}
+@media (max-width: 600px){
+    .resources-box{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 }

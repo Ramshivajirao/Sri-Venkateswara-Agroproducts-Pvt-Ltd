@@ -32,6 +32,8 @@
 .products-cards{
     position: relative;
     transition: 0.2s;
+    padding: 0px;
+    margin: 0px;
 }
 
 .products-cards:hover {
@@ -41,11 +43,10 @@
     border-radius: 5px;
 }
 
-.products-cards-1{
+.products-cards-1 {
     background-color: rgb(204, 238, 212);
-    font-size: 20px;
-    text-align: center;
-    padding: 70px;
+    align-items: center;
+    font-size: 100px;
     border-radius: 5px 5px 0 0;
 }
 .products-card-kharif{
@@ -130,7 +131,16 @@
 @media(max-width: 480px){
     .product-rows-all {
     display: grid;
-    grid-template-columns:repeat(1,1fr);
-    gap: 20px;
+    grid-template-columns:1fr !important;
+}
+
+}@media (max-width: 770px){
+    .product-rows-all{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.products-cards-2  p{
+    font-size: 13px;
+    height: 60px;
 }
 }
