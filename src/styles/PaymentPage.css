@@ -320,7 +320,7 @@
   border-color: #ccc;
 }
 
-@media (max-width: 500px){
+@media (max-width: 768px){
   .payment-page-container {
     margin-top: 5px;
     margin-left: 0px;
