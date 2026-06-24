@@ -1,11 +1,11 @@
 /* Myorders.css */
 
 .myorders-1 {
-    margin-top: -15px;
+    margin-top: 15px;
     margin-left: 280px;
     background-color: rgb(49, 47, 47);
     color: white;
-    padding: 20px;
+    padding: 0px;
 }
 
 .myorders-heading {
@@ -136,9 +136,10 @@ hr {
 /* Mobile Responsiveness */
 @media (max-width: 900px) {
     .myorders-1 {
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: -59px;
+        padding-top: 10px;
     }
     
     .myorders-heading {
@@ -158,5 +159,10 @@ hr {
         width: 100%;
         max-width: 400px;
         margin: 10px 0;
+    }
+    .myorders-box {
+    border: 1px solid white;
+    border-radius: 9px;
+    padding: 10px;
     }
 }
