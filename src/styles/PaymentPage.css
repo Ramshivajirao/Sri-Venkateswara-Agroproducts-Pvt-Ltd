@@ -1,0 +1,321 @@
+/* =========================================
+   Base Layout
+   ========================================= */
+.payment-page-container {
+    margin-top: -15px;
+    margin-left: 280px;
+    background-color: rgb(49, 47, 47);
+    color: white;
+    padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #333;
+}
+
+.payment-layout {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   Empty State / Fallback
+   ========================================= */
+.payment-empty-state {
+  padding: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.payment-empty-state h2 {
+  margin-top: 0;
+}
+
+.payment-empty-state p {
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   Header Section
+   ========================================= */
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.payment-header-text h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.4rem;
+}
+
+.payment-header-text p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.payment-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn, .profile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.icon-btn:hover, .profile-btn:hover {
+  background: #f8f9fa;
+}
+
+/* =========================================
+   Left Panel (Form Area)
+   ========================================= */
+.payment-left-panel {
+  flex: 2;
+  min-width: 350px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* =========================================
+   Payment Method Toggle (Radio Cards)
+   ========================================= */
+.payment-method-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.payment-radio-card {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.payment-radio-card input {
+  cursor: pointer;
+}
+
+.payment-radio-card.active {
+  border: 2px solid #28a745;
+  background: #eefaf1;
+  color: #155724;
+}
+
+/* =========================================
+   Form Inputs
+   ========================================= */
+.payment-form {
+  margin-bottom: 30px;
+}
+
+.form-group-col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-field label {
+  font-weight: 600;
+  color: #444;
+  font-size: 0.9em;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+}
+
+/* =========================================
+   Delivery Recap Box
+   ========================================= */
+.delivery-recap {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.delivery-recap h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.delivery-recap p {
+  margin: 6px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* =========================================
+   Right Panel (Invoice Area)
+   ========================================= */
+.payment-right-panel {
+  flex: 1;
+  min-width: 280px;
+}
+
+.invoice-card {
+  position: sticky;
+  top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.invoice-title {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.invoice-items {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.invoice-item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.invoice-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.discount-row {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.invoice-divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+.grand-total-row {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.grand-total-row p:last-child {
+  color: #28a745;
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.payment-submit-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.payment-submit-btn:hover {
+  background-color: #218838;
+}
+
+.payment-btn-primary {
+  padding: 12px 24px;
+  font-size: 1em;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-btn-secondary {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.payment-btn-secondary:hover {
+  background-color: #e2e6ea;
+  border-color: #ccc;
+}

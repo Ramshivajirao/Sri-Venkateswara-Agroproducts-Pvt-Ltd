@@ -1,158 +1,162 @@
-.myorders-1{
+/* Myorders.css */
+
+.myorders-1 {
     margin-top: -15px;
     margin-left: 280px;
     background-color: rgb(49, 47, 47);
     color: white;
     padding: 20px;
 }
-.myorders-heading{
+
+.myorders-heading {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    /* margin: 30px 0px; */
-}
-.myorders-heading-1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.myorders-heading-1 button{
-    border-radius: 10px;
-    padding: 0px 15px;
-    margin-left: 32px;
-}
-.myorders-heading-btn button{
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
 }
 
-.myorders-orderitems{
-    border: 2px solid white;
-    padding: 30px;
-    
+.myorders-heading-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-.myorder-orderitem-box{
-    border: 2px solid white;
+
+.myorders-heading-1 button {
     border-radius: 10px;
-    width: 300px;
+    padding: 5px 15px;
+    margin-left: 32px;
+    background-color: #f0f0f0;
+    border: none;
+    font-weight: bold;
+}
+
+.myorders-heading-btn button {
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.myorder-orderitem-box {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
     padding: 10px;
     margin-top: 30px;
 }
-.myorder-orderitem-min-box{
+
+.myorder-orderitem-min-box {
     display: flex;
     justify-content: space-between;
+    margin: 5px 0;
 }
 
-.myorders-myjourney{
+.myorders-myjourney {
     display: flex;
     justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-.myorders-box{
-    border: 2px solid white;
+
+.myorders-box {
+    border: 1px solid white;
     border-radius: 9px;
-    margin-right: 10px;
     padding: 20px;
     width: 450px;
 }
-.myorders-box-1 td{
-    padding: 0px 15px;
+
+.myorders-box-1 table {
+    width: 100%;
+    margin-bottom: 20px;
 }
-.myorders-box-1 th {
-    border-collapse: collapse;
-    border-bottom: 2px solid white;
-}
+
+.myorders-box-1 th, 
 .myorders-box-1 td {
+    padding: 10px;
     text-align: center;
-    border-collapse: collapse;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
 }
-.delivery-info{
-    border: 2px solid white;
+
+.delivery-info {
+    border: 1px solid white;
     width: 450px;
     border-radius: 10px;
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 20px;
+    padding: 20px;
 }
-.delivery-info-1{
+
+.delivery-info-1 {
     display: flex;
     justify-content: space-between;
-    padding: 0px;
+    padding: 10px 0;
     align-items: center;
 }
-hr{
+
+.delivery-info-1 p {
+    margin: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #555;
     margin: 0px;
     padding: 0px;
 }
-.order-journey{
-    border: 2px solid white;
+
+.order-journey {
+    border: 1px solid white;
     border-radius: 10px;
     width: 450px;
-    height: 650px;
-    padding:10px;
-    margin: 0px 10px;
-}
-.order-journey-1{
-    margin: 30px 60px;
-}
-
-
-
-
-
-@media (max-width: 740px){
-    .myorders-1 {
-    margin-top: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 0px;
-    background-color: rgb(49, 47, 47);
-    color: white;
+    min-height: 600px;
     padding: 20px;
+}
+
+.order-journey-1 {
+    margin: 20px 40px;
+}
+
+.timeline-step {
+    margin-bottom: 25px;
+}
+
+.timeline-step h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.timeline-step p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .myorders-1 {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-    .myorders-myjourney{
-    display: flex;
-    flex-direction: column;
+    
+    .myorders-heading {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
     }
-    .delivery-info{
-        width: 310px;
+    
+    .myorders-myjourney {
+        flex-direction: column;
+        align-items: center;
     }
-    .delivery-info-1{
-        width: 280px;
-    }
-    .order-journey{
-    border: 2px solid white;
-    border-radius: 10px;
-    width: 310px;
-    height: 650px;
-    margin: 10px 0px;
-    }
-    .order-journey-1{
-    margin: 10px 30px;
-    }
-    .myorders-box{
-    border: 2px solid white;
-    border-radius: 9px;
-    width: 310px;
-    padding: 0px;
-    margin: 0px;
-    }
-    .myorders-box-1 td{
-        padding: 0px;
-    }
-    .myorders-box-1 th {
-        border-collapse: collapse;
-        border-bottom: 2px solid white;
-    }
-    .myorders-box-1 td {
-        /* text-align: center; */
-        border-collapse: collapse;
-        border-bottom: 2px solid white;
-    }
-    .myorder-orderitem-box{
-        border: 2px solid white;
-        border-radius: 10px;
-        width: 280px;
-        margin: 10px;
+    
+    .myorders-box, 
+    .delivery-info, 
+    .order-journey {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
     }
 }

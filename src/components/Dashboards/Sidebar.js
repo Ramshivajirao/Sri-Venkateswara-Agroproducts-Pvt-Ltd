@@ -33,15 +33,15 @@ const Sidebar = () => {
 
         <ul className="side-items">
           <li>
-            <NavLink to="/DashboardLayout/products" end>
-              <span><RxDashboard /></span>
-              <label>Products</label>
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/DashboardLayout/overview" end>
               <span><GrOverview /></span>
               <label>Overview</label>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/DashboardLayout/products" end>
+              <span><RxDashboard /></span>
+              <label>Products</label>
             </NavLink>
           </li>
           <li>
@@ -57,7 +57,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/DashboardLayout/payments" end>
+            <NavLink to="/DashboardLayout/paymentpage" end>
               <span><MdPayments /></span>
               <label>Payments</label>
             </NavLink>

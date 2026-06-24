@@ -1,187 +1,165 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/Overview.css";
-import { CiBellOn,CiMemoPad } from "react-icons/ci";
-import { MdOutlineLocalOffer } from "react-icons/md";
+import { CiBellOn, CiMemoPad } from "react-icons/ci";
+import { MdLightbulbOutline } from "react-icons/md";
 import { SiContactlesspayment } from "react-icons/si";
 import { FaRupeeSign } from "react-icons/fa";
 
+const defaultOrders = [
+  { id: "BLK-OO89", product: "Paddy-SVA-R9", qty: "500KGS", status: "In Transport" },
+  { id: "BLK-OO86", product: "Maize-Gold-F1", qty: "200KGS", status: "Delivered" },
+];
+   
 const Overview = () => {
+  // 1. Set up state for our orders
+  const [ordersList, setOrdersList] = useState([]);
+
+  // 2. Fetch from the "Mock Database" (Local Storage) when the page loads
+  useEffect(() => {
+    const savedOrders = localStorage.getItem("myDealerOrders");
     
+    if (savedOrders) {
+      // If we found orders saved by the "My Orders" page, use them!
+      setOrdersList(JSON.parse(savedOrders));
+    } else {
+      // If nothing is saved yet, use our default list and save it for the first time
+      setOrdersList(defaultOrders);
+      localStorage.setItem("myDealerOrders", JSON.stringify(defaultOrders));
+    }
+  }, []); // <-- REMOVED defaultOrders FROM HERE
+
+  // --- Dynamic Calculations based on your live orders ---
+  
+  // Total orders is now based on the actual length of your array (+ some historical data if you want)
+  const totalOrdersCount = ordersList.length + 34; // 34 historical + however many are live
+  
+  // Look through the orders to see how many are "Delivered" to calculate loyalty
+  const deliveredOrders = ordersList.filter(order => order.status === "Delivered").length;
+  const loyaltyBonusAway = 18000 - (deliveredOrders * 500); // Just a mock calculation for the UI
+  
+  // Mock Invoices
+  const invoices = [
+    { id: "inv-2026-41", amount: 20000, status: "Pending" },
+    { id: "inv-2026-22", amount: 14500, status: "Pending" },
+  ];
+  const pendingPaymentsTotal = invoices.reduce((sum, inv) => sum + inv.amount, 0) + 8000; 
+
   return (
-    <div className="">
+    <div className="overview-container">
       <div className="overview">
-        <div className="overview-heading">
-          <div className="">
-            <h4>Kamal AgroSeeds, Warangal</h4>
+        
+        {/* Header Section */}
+        <div className="overview-header">
+          <div className="header-info">
+            <h2>Kamal AgroSeeds, Warangal</h2>
             <p>Dealer ID: SVA-DLR-0214. Active since 2019</p>
           </div>
-          <div className="overview-heading-btn">
-            <button>
-              <CiBellOn />
-            </button>
-            <button>KS</button>
+          <div className="header-actions">
+            <button className="icon-btn"><CiBellOn size={20} /></button>
+            <button className="profile-btn">KS</button>
           </div>
         </div>
 
-        <div>
-          <div className="orders-box">
-            <div className="orders-box-1">
-              <h4>Total Order(2026)</h4>
-              <p className="live-updates">38</p>
-              <p className="color-update">+5 this month</p>
+        {/* Top Summary Cards */}
+        <div className="summary-cards">
+          <div className="card">
+            <h4>Total Order(2026)</h4>
+            <p className="card-value">{totalOrdersCount}</p>
+            <p className="text-green">+{ordersList.length} this month</p>
+          </div>
+          <div className="card">
+            <h4>Pending Payments</h4>
+            <p className="card-value"><FaRupeeSign size={18}/> {pendingPaymentsTotal.toLocaleString('en-IN')}</p>
+            <p className="text-green">{invoices.length} Invoices due</p>
+          </div>
+          <div className="card">
+            <h4>Active Offers</h4>
+            <p className="card-value">3</p>
+            <p className="text-green">Kharif Special</p>
+          </div>
+        </div>
+
+        {/* Actionable Insights */}
+        <div className="insights-box">
+          <h3 className="insights-title">
+            <MdLightbulbOutline /> Smart Actions & Reorder Insights
+          </h3>
+          <div className="insights-grid">
+            <div className="insight-item alert">
+              <strong>Stock Alert:</strong> Your Cotton variety stock hasn't been renewed. 
+              <span className="insight-action">Order Cotton Now</span>
             </div>
-            <div className="orders-box-1">
-              <h4>Pending Payments</h4>
-              <p className="live-updates">42,500</p>
-              <p className="color-update">2 Invoices due</p>
-            </div>
-            <div className="orders-box-1">
-              <h4>Active Offers</h4>
-              <p className="live-updates">3</p>
-              <p className="color-update">Kharif Special</p>
+            <div className="insight-item discount">
+              <strong>Scheme Benefit:</strong> You are currently <strong><FaRupeeSign size={11}/>{loyaltyBonusAway.toLocaleString('en-IN')} away</strong> from achieving the 2% Loyalty Bonus!
             </div>
           </div>
         </div>
 
-        <div className="tracking-payment-box">
-          <div className="tracking-box">
-            <h4>
-              <CiMemoPad /> Order Tracking
-            </h4>
-            <div className="tracking-box-1">
-              <table>
-                <tr>
-                  <th>ORDER ID</th>
-                  <th>PRODUCTS</th>
-                  <th>QTY</th>
-                  <th>STATUS</th>
-                </tr>
-                <tr className="g-3">
-                  <td>BLK-OO89</td>
-                  <td>Paddy-SVA-R9</td>
-                  <td>500KGS</td>
-                  <td>
-                    <button >In Transport</button>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>BLK-OO86</td>
-                  <td>Maize-Gold-F1</td>
-                  <td>200KGS</td>
-                  <td>
-                    <button>Delivered</button>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>BLK-OO82</td>
-                  <td>Chilli-SVA-O1</td>
-                  <td>100KGS</td>
-                  <td>
-                    <button>Packing</button>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>BLK-OO72</td>
-                  <td>Tomato-SVA-O1</td>
-                  <td>50KGS</td>
-                  <td>
-                    <button>Delivered</button>
-                  </td>
-                </tr>
+        {/* Main Dashboard Panels */}
+        <div className="dashboard-panels">
+          
+          {/* Order Tracking Panel (NOW DYNAMIC) */}
+          <div className="panel order-tracking-panel">
+            <h3 className="panel-title">
+              <CiMemoPad /> Order Tracking ({ordersList.length} Active)
+            </h3>
+            <div className="table-container">
+              <table className="tracking-table">
+                <thead>
+                  <tr>
+                    <th>ORDER ID</th>
+                    <th>PRODUCTS</th>
+                    <th>QTY</th>
+                    <th>STATUS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Loop through the dynamically loaded orders */}
+                  {ordersList.map((order, index) => (
+                    <tr key={index}>
+                      <td>{order.id}</td>
+                      <td>{order.product}</td>
+                      <td>{order.qty}</td>
+                      <td>
+                        <span className={`status-badge ${order.status?.toLowerCase().replace(" ", "-")}`}>
+                          {order.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                  
+                  {ordersList.length === 0 && (
+                    <tr>
+                      <td colSpan="4" style={{ textAlign: 'center', padding: '20px' }}>No active orders found.</td>
+                    </tr>
+                  )}
+                </tbody>
               </table>
-
-              <button className="tracking-box-2">Place New Bulk Order</button>
             </div>
+            <button className="btn-outline-wide">Place New Bulk Order</button>
           </div>
-          <div>
-            <div className="payment-box">
-              <h4>
-                <SiContactlesspayment /> Payments
-              </h4>
-              <div className="payment-box-1">
-                <p>Invoice#inv-2026-41</p>
-                <p>
-                  <FaRupeeSign />
-                  20,000
-                </p>
+
+          {/* Payments Panel */}
+          <div className="panel payments-panel">
+            <h3 className="panel-title"><SiContactlesspayment /> Payments</h3>
+            <div className="payment-list">
+              {invoices.map((inv) => (
+                <div className="payment-row" key={inv.id}>
+                  <span>Invoice#{inv.id}</span>
+                  <span><FaRupeeSign className="rupee-icon"/> {inv.amount.toLocaleString('en-IN')}</span>
+                </div>
+              ))}
+              <div className="payment-row total-row">
+                <span>Total (2026 YTD)</span>
+                <span><FaRupeeSign className="rupee-icon"/> 1,82,000</span>
               </div>
-              <hr />
-              <div className="payment-box-1">
-                <p>Invoice#inv-2026-22</p>
-                <p>
-                  <FaRupeeSign />
-                  14,500
-                </p>
-              </div>
-              <hr />
-              <div className="payment-box-1">
-                <p>Paid this month</p>
-                <p>
-                  <FaRupeeSign />
-                  56,000
-                </p>
-              </div>
-              <hr />
-              <div className="payment-box-1">
-                <p>Total (2026 YTD)</p>
-                <p>
-                  <FaRupeeSign />
-                  1,82,000
-                </p>
-              </div>
-              <hr />
-              <div className="payment-box-1">
-                <button>Pay Now</button>
-                <button>Download Invoice</button>
-              </div>
+            </div>
+            <div className="payment-actions">
+              <button className="btn-light">Pay Now</button>
             </div>
           </div>
         </div>
 
-        <div className="active-offer-box">
-          <h4>
-            <MdOutlineLocalOffer />
-            Active Offers And Schemes
-          </h4>
-          <div className="offers-box">
-            <div>
-              <h4>
-                Kharif 2026 Bulk Discounts - 12% off on orders of above 300kgs
-              </h4>
-              <p>
-                Valid until 30 june 2026 - Applies to Paddy, Maize, and cotton
-                varitey
-              </p>
-            </div>
-            <div>
-              <button>Apply Now</button>
-            </div>
-          </div>
-          <div className="offers-box">
-            <div>
-              <h4>Early Bird Rabi Booking -Free Delivery on Advance Orders</h4>
-              <p>
-                Valid until 30 june 2026 - Applies to Paddy, Maize, and cotton
-                varitey
-              </p>
-            </div>
-            <div>
-              <button>View Details</button>
-            </div>
-          </div>
-          <div className="offers-box">
-            <div>
-              <h4>Loyalty Bonus -Extra 2% on total billing above 2L/year</h4>
-              <p>Yor are 18,000 away form this reward</p>
-            </div>
-            <div>
-              <button>Almost There</button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
